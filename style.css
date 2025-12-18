@@ -1,0 +1,10 @@
+.section-main-content {
+    width: calc(100% - 300px);
+    min-height: 1500px;
+    border: 1px solid blue;
+}
+
+.section-basket {
+    width: 300px;
+    border: 1px solid blue;
+}
