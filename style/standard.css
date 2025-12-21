@@ -8,17 +8,17 @@ body {
 
 header {
     height: 100px;
-    background-color: #eeab69;
+    background-color: #e76c1f;
 }
 
 .container-header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    /* border-left: 1px solid red;
-    border-right: 1px solid red; */
 }
 
 main {
@@ -38,16 +38,20 @@ main {
 }
 
 footer {
-    height: 100px;
-    background-color: #eeab69;
+    height: 130px;
+    background-color: #e76c1f;
 }
 
 .container-footer {
     display: flex;
+        flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 100%;
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    /* border-left: 1px solid red;
-    border-right: 1px solid red; */
+    font-weight: 800;
+    color:#ffffff;
 }
