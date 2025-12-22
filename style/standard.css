@@ -1,13 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Rubik";
     height: 100dvh;
-    scroll-behavior: smooth;
-    overflow-y: auto;
 }
 
 header {
     height: 100px;
+    width: 100%;
     background-color: #e76c1f;
 }
 
@@ -24,7 +27,6 @@ header {
 main {
     flex: 1;
     background-color: #ffffff;
-    overflow: visible;
 }
 
 .container-main {
@@ -33,8 +35,6 @@ main {
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    /* border-left: 1px solid red;
-    border-right: 1px solid red; */
 }
 
 footer {
@@ -44,7 +44,7 @@ footer {
 
 .container-footer {
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -53,5 +53,5 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     font-weight: 800;
-    color:#ffffff;
+    color: #ffffff;
 }

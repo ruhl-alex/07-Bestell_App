@@ -17,35 +17,38 @@
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <div class="container-header">
                 <div class="logo-top"></div>
                 <nav class="navigation">
-                    <a class="navlink" href="">Home</a>
-                    <a class="navlink" href="">Menu</a>
-                    <a class="navlink" href="">Contact</a>
-                    <a class="navlink" href="">About</a>
+                    <a class="navlink" href="#home">Home</a>
+                    <a class="navlink" href="#menu">Menu</a>
+                    <a class="navlink" href="#contact">Contact</a>
                 </nav>  
         </div>
     </header>
     <section class="header-sec">
         <img src="./assets/img/header.jpg" alt="Pizza Image" class="header-img">
         <img src="./assets/img/logo_symbol.png" alt="Logo Symbol" class="logo-overlay">
-        <span class="header-slogan-top">Pizzeria Pizzaro</span>
+        <h1 class="header-slogan-top">Pizzeria Pizzaro</h1>
         <span class="rating"><b>4.9 <span class="stars">★★★★★</span></b> (438)</span>
         <span class="header-slogan-bottom">The best destination for real Italian Pizza</span>
     </section>
-    <main>
+    <main id="menu">
         <div class="container-main">
             <section class="section-main-content">
                 MAIN CONTENT
             </section>
             <section class="section-basket">
-                <div class="basket">Basket</div>
+                <div id="basket" class="basket">
+                    <h2 class="basket-headline">Dein Warenkorb</h2>
+                    <span class="basket-desc">Aktuell ist dein Warenkorb leer.<br><br>Wähle jetzt ein leckeres Gericht aus unserem Menü aus!</span>
+                    <div class="empty-basket-img" aria-label="Empty Basket"></div>
+                </div>
             </section>
         </div>
     </main>
-    <footer>
+    <footer id="contact">
         <div class="container-footer">
             Pizzeria Pizzaro © 2025 All Rights Reserved.<br>
             Pizzeria Pizzaro is a fictional company created for educational purposes.<br>
