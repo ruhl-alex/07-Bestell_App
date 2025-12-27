@@ -108,3 +108,25 @@
     padding-top: 5px;
     border-top: solid 2px #fdeadc;
 }
+
+.basket-order-button {
+    width: 85%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #e76c1f;
+    color: #fdeadc;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.basket-order-button:hover {
+    filter: brightness(1.05);
+}
+
+.basket-order-button:active{
+    transform: scale(0.96);
+}
