@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 260px;
-    height: 400px;
+    height: 440px;
     background-color: #363534;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -37,4 +37,74 @@
     mask-position: center;
     mask-size: contain;
     mask-composite: intersect;
+}
+
+.basket-added-items {
+    overflow-y: auto;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    padding-right: 5px;
+}
+
+.basket-added-items::-webkit-scrollbar {
+    width: 10px;
+}
+
+.basket-added-items::-webkit-scrollbar-thumb {
+    background: #fdeadc;
+    border-radius: 6px;
+}
+
+.basket-added-item {
+    font-weight: 800;
+    background-color: #fdeadc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.basket-desc-qty-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0px 0px;
+}
+
+.basket-amount {
+    width: 100%;
+    color: #fdeadc;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.basket-amount-table1 {
+    width: 95%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.basket-amount-table1 td:first-child {
+    text-align: left;
+}
+
+.basket-amount-table1 td:last-child {
+    text-align: right;
+}
+
+.basket-amount-table2 {
+    width: 95%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.basket-amount-table2 td:first-child {
+    text-align: left;
+    padding-top: 5px;
+    border-top: solid 2px #fdeadc;
+}
+
+.basket-amount-table2 td:last-child {
+    text-align: right;
+    padding-top: 5px;
+    border-top: solid 2px #fdeadc;
 }
