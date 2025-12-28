@@ -133,3 +133,60 @@ h2 {
     margin-left: 60px;
     margin-bottom: 20px;
 }
+
+.item-img {
+    width: 30%;
+    height: 140px;
+    border-radius: 20px;
+    padding: 15px;
+    object-fit: cover;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 50%
+}
+
+.item-title {
+    font-family: "Rubik_bold";
+    font-size: 20px;
+    color: #363534;
+    padding-bottom: 6px;
+}
+
+.item-price-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 15px;
+    width: 20%
+}
+
+.item-price {
+    font-weight: 600;
+    font-size: 19px;
+    color: #363534;
+}
+
+.item-buy-button {
+    font-weight: 600;
+    font-size: 16px;
+    color: #363534;
+    background-color: #fbf8f2;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.item-buy-button:hover {
+    filter: brightness(1.05);
+}
+
+.item-buy-button:active{
+    transform: scale(0.96);
+}
