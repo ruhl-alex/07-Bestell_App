@@ -1,11 +1,11 @@
-let items = [
+const ITEMS = [
     {
         "category": "pizzas",
         "name": "Pizza Funghi",
         "ingredients": "Tomatensoße, Salami, Frische Champignons",
         "img": "pizza-funghi.jpg",
         "price": 15.90,
-    }
+    },
 
     {
         "category": "pizzas",
@@ -13,7 +13,7 @@ let items = [
         "ingredients": "Tomaten, Chorizo, Mozarella",
         "img": "pizza-chorizo.jpg",
         "price": 15.90,
-    }
+    },
 
     {
         "category": "pizzas",
@@ -21,7 +21,7 @@ let items = [
         "ingredients": "Tomatensoße, Mozarella",
         "img": "pizza-magherita.jpg",
         "price": 13.90,
-    }
+    },
 
     {
         "category": "pizzas",
@@ -29,7 +29,7 @@ let items = [
         "ingredients": "Tomaten, Paprika, Peperoni, Rote Zwiebeln, Cillisoße",
         "img": "pizza-spicy.jpg",
         "price": 15.90,
-    }
+    },
 
     {
         "category": "pizzas",
@@ -37,7 +37,7 @@ let items = [
         "ingredients": "Chicken, Tomatensoße, Mozarella, Gorgonzola, Parmesan, Emmentaler",
         "img": "pizza-quaddro.jpg",
         "price": 14.90,
-    }
+    },
 
     {
         "category": "salads",
@@ -45,7 +45,7 @@ let items = [
         "ingredients": "Rind, Rukola, Tomaten, Parmesan, Balsamico Soße",
         "img": "salat-warm-beef.jpg",
         "price": 11.90,
-    }
+    },
 
     {
         "category": "salads",
@@ -53,7 +53,7 @@ let items = [
         "ingredients": "Feldsalat, Gurken, Tomaten, Paprika, Karotten",
         "img": "salat-mini-green.jpg",
         "price": 8.90,
-    }
+    },
 
     {
         "category": "salads",
@@ -61,7 +61,7 @@ let items = [
         "ingredients": "Garnelen, Calamari, Tomaten, Gurken, Rucola, Zitronen-Dill Soße",
         "img": "salat-sea-food.jpg",
         "price": 11.90,
-    }
+    },
 
     {
         "category": "salads",
@@ -69,7 +69,7 @@ let items = [
         "ingredients": "Grüner Salat, Tofu, Edamame, Karotten, Sesam-Ingwer Soße",
         "img": "salat-green-tofu.jpg",
         "price": 10.90,
-    }
+    },
 
     {
         "category": "drinks",
@@ -77,7 +77,7 @@ let items = [
         "ingredients": "Coca Cola mit Eiswürfeln",
         "img": "cola.jpg",
         "price": 6.90,
-    }
+    },
 
     {
         "category": "drinks",
@@ -85,7 +85,7 @@ let items = [
         "ingredients": "Fanta mit Eiswürfeln",
         "img": "fanta.jpg",
         "price": 6.90,
-    }
+    },
     
     {
         "category": "drinks",
@@ -93,7 +93,7 @@ let items = [
         "ingredients": "Sprite mit Eiswürfeln",
         "img": "sprite.jpg",
         "price": 6.90,
-    }
+    },
 
     {
         "category": "drinks",
@@ -101,7 +101,7 @@ let items = [
         "ingredients": "Stilles Wasser mit Eiswürfeln",
         "img": "water.jpg",
         "price": 6.90,
-    }
+    },
 
     {
         "category": "drinks",
@@ -109,5 +109,13 @@ let items = [
         "ingredients": "Frisch gezapftes Bier",
         "img": "beer.jpg",
         "price": 7.90,
+    }
+]
+
+let basket = [
+    {
+        "item": "",
+        "price": 0,
+        "quantity": 0,
     }
 ]
