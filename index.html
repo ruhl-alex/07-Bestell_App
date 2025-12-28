@@ -16,7 +16,7 @@
     <title>Pizzaro</title>
 </head>
 
-<body>
+<body onload="render()">
     <header id="home">
         <div class="container-header">
             <div class="logo-top"></div>
@@ -40,29 +40,31 @@
                 <div class="item-group-banner"><img class="banner-icon" src="./assets/icons/pizza.png">
                     <h2>Pizza</h2>
                 </div>
-                <div id="item-container" class="item-container">
-                    <img src="./assets/img/pizza-funghi.jpg" alt="Pizza Funghi" class="item-img">
-                    <div class="item-info">
-                        <span class="item-title">Pizza Funghi</span>
-                        <span>Tomatensoße, Salami, Frische Champignons</span>
-                    </div>
-                    <div class="item-price-info">
-                        <span class="item-price">15,90 €</span>
-                        <div><button class="item-buy-button">Hinzufügen</button></div>
+                <div id="item-container-pizzas">
+                    <div class="item-container">
+                        <img src="./assets/img/pizza-funghi.jpg" alt="Pizza Funghi" class="item-img">
+                        <div class="item-info">
+                            <span class="item-title">Pizza Funghi</span>
+                            <span>Tomatensoße, Salami, Frische Champignons</span>
+                        </div>
+                        <div class="item-price-info">
+                            <span class="item-price">15,90 €</span>
+                            <div><button class="item-buy-button">Hinzufügen</button></div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="item-group-banner"><img class="banner-icon" src="./assets/icons/salat.png">
                     <h2>Salat</h2>
                 </div>
-                <div id="item-container" class="item-container">
+                <div id="item-container-salads">
 
                 </div>
 
                 <div class="item-group-banner"><img class="banner-icon" src="./assets/icons/getranke.png">
                     <h2>Getränke</h2>
                 </div>
-                <div id="item-container" class="item-container">
+                <div id="item-container-drinks">
 
                 </div>
 
