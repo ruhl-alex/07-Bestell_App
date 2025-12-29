@@ -70,30 +70,21 @@
 
             </section>
             <section class="section-basket">
-                <div id="basket" class="basket">
+                <div id="empty-basket" class="basket">
                     <h2 class="basket-headline">Dein Warenkorb</h2>
                     <span class="basket-desc">Aktuell ist dein Warenkorb leer.<br><br>Wähle jetzt ein leckeres Gericht
                         aus unserem Menü aus!</span>
                     <div class="empty-basket-img" aria-label="Empty Basket"></div>
                 </div>
-                <br>
-                <div id="basket" class="basket">
+                <div id="filled-basket" class="basket d-none">
                     <h2 class="basket-headline">Dein Warenkorb</h2>
-                    <div class="basket-added-items">
-                        <div class="basket-added-item">
-                            <span>1 x Pizza Margherita</span><br>
-                            <div class="basket-desc-qty-price"><span>- 1 +</span><span> 8,50 €</span></div>
-                        </div>
-                        <div class="basket-added-item">
-                            <span>1 x Pizza Margherita</span><br>
-                            <div class="basket-desc-qty-price"><span>- 1 +</span><span> 8,50 €</span></div>
-                        </div>
+                    <div id="added-items" class="basket-added-items">
                         <div class="basket-added-item">
                             <span>1 x Pizza Margherita</span><br>
                             <div class="basket-desc-qty-price"><span>- 1 +</span><span> 8,50 €</span></div>
                         </div>
                     </div>
-                    <div class="basket-amount">
+                    <div id="id-basket-amount" class="basket-amount">
                         <table class="basket-amount-table1">
                             <tr>
                                 <td>Zwischensumme:</td>
@@ -111,7 +102,7 @@
                             </tr>
                         </table>
                     </div>
-                    <button class="basket-order-button">Bestellen (27,50 €)</button>
+                    <!-- <button class="basket-order-button">Bestellen (27,50 €)</button> -->
                 </div>
             </section>
         </div>

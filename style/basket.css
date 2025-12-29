@@ -72,6 +72,9 @@
 }
 
 .basket-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     color: #fdeadc;
     font-weight: 800;

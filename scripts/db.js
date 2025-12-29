@@ -1,5 +1,7 @@
-const PIZZAS = [
-    {
+const ITEMS = [
+    {   
+        "id": 0,
+        "category": "pizzas",
         "name": "Pizza Funghi",
         "ingredients": "Tomatensoße, Salami, Frische Champignons",
         "img": "pizza-funghi.jpg",
@@ -8,7 +10,9 @@ const PIZZAS = [
     },
 
     {
-        "name": "Pizza Chorizp",
+        "id": 1,
+        "category": "pizzas",
+        "name": "Pizza Chorizo",
         "ingredients": "Tomaten, Chorizo, Mozarella",
         "img": "pizza-chorizo.jpg",
         "alt": "Pizza Chorizo",
@@ -16,6 +20,8 @@ const PIZZAS = [
     },
 
     {
+        "id": 2,
+        "category": "pizzas",
         "name": "Pizza Magherita",
         "ingredients": "Tomatensoße, Mozarella",
         "img": "pizza-magherita.jpg",
@@ -24,6 +30,8 @@ const PIZZAS = [
     },
 
     {
+        "id": 3,
+        "category": "pizzas",
         "name": "Pizza Spicy",
         "ingredients": "Tomaten, Paprika, Peperoni, Rote Zwiebeln, Cillisoße",
         "img": "pizza-spicy.jpg",
@@ -32,16 +40,17 @@ const PIZZAS = [
     },
 
     {
+        "id": 4,
+        "category": "pizzas",
         "name": "Pizza Quaddro Formaggi with Chicken",
         "ingredients": "Chicken, Tomatensoße, Mozarella, Gorgonzola, Parmesan, Emmentaler",
         "img": "pizza-quaddro.jpg",
         "alt": "Pizza Quaddro Formaggi with Chicken",
         "price": 14.90,
-    }
-]
+    },
 
-const SALADS = [
-{
+    {
+        "id": 5,
         "category": "salads",
         "name": "Rind Rukola Salat",
         "ingredients": "Rind, Rukola, Tomaten, Parmesan, Balsamico Soße",
@@ -51,6 +60,7 @@ const SALADS = [
     },
 
     {
+        "id": 6,
         "category": "salads",
         "name": "Kleiner grüner Salat",
         "ingredients": "Feldsalat, Gurken, Tomaten, Paprika, Karotten",
@@ -60,6 +70,7 @@ const SALADS = [
     },
 
     {
+        "id": 7,
         "category": "salads",
         "name": "Meeresfrüchste Salat",
         "ingredients": "Garnelen, Calamari, Tomaten, Gurken, Rucola, Zitronen-Dill Soße",
@@ -69,17 +80,18 @@ const SALADS = [
     },
 
     {
+        "id": 8,
         "category": "salads",
         "name": "Tofu Salat",
         "ingredients": "Grüner Salat, Tofu, Edamame, Karotten, Sesam-Ingwer Soße",
         "img": "salat-green-tofu.jpg",
         "alt": "Tofu Salat",
         "price": 10.90
-    }
-]
+    },
 
-const DRINKS = [
-{
+    {
+        "id": 9,
+        "category": "drinks",
         "name": "Cola",
         "ingredients": "Coca Cola mit Eiswürfeln",
         "img": "cola.jpg",
@@ -88,6 +100,8 @@ const DRINKS = [
     },
 
     {
+        "id": 10,
+        "category": "drinks",
         "name": "Fanta",
         "ingredients": "Fanta mit Eiswürfeln",
         "img": "fanta.jpg",
@@ -96,6 +110,8 @@ const DRINKS = [
     },
     
     {
+        "id": 11,
+        "category": "drinks",
         "name": "Sprite",
         "ingredients": "Sprite mit Eiswürfeln",
         "img": "sprite.jpg",
@@ -104,6 +120,8 @@ const DRINKS = [
     },
 
     {
+        "id": 12,
+        "category": "drinks",
         "name": "Stilles Wasser",
         "ingredients": "Stilles Wasser mit Eiswürfeln",
         "img": "water.jpg",
@@ -112,6 +130,8 @@ const DRINKS = [
     },
 
     {
+        "id": 13,
+        "category": "drinks",
         "name": "Bier",
         "ingredients": "Frisch gezapftes Bier",
         "img": "beer.jpg",
@@ -121,9 +141,5 @@ const DRINKS = [
 ]
 
 let BASKET = [
-    {
-        "item": "",
-        "price": 0,
-        "quantity": 0,
-    }
+
 ]
