@@ -26,7 +26,7 @@ function getPizzaTemplate(indexPizza) {
             </div>
             <div class="item-price-info">
                 <span class="item-price">${PIZZAS[indexPizza].price.toFixed(2)} €</span>
-                <div><button class="item-buy-button">Hinzufügen</button></div>
+                <div><button class="item-buy-button" onclick="addPizzaToBasket(${[indexPizza]})">Hinzufügen</button></div>
             </div>
         </div>
         `;
