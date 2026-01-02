@@ -32,9 +32,18 @@ dialog {
     transform: scaleX(-1);
 }
 
-.close-btn {
+.close-btn-area {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.close-btn {
+    background-color: #363534;
+    border: 0;
+    color: #fdeadc;
+    font-size: 22px;
+    margin-right: 10px;
+    cursor: pointer;
 }

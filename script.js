@@ -82,9 +82,15 @@ function order() {
     const dialogRef = document.getElementById("item-bought-dialog");
     const contentRefFilledBasket = document.getElementById("filled-basket");
 
-
+    BASKET = [];
+    render();
     contentRefFilledBasket.classList.add("d-none");
     dialogRef.showModal();
+    setTimeout(() => {dialogRef.close();}, 3000);
+}
 
-    // setTimeout(() => {dialogRef.close();}, 5000);
+function closeDialog() {
+    const dialogRef = document.getElementById("item-bought-dialog");
+
+    dialogRef.close();
 }
