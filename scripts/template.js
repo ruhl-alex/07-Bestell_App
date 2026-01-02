@@ -105,6 +105,6 @@ function displayTotalPrice(totalPrice) {
                 <td>${(totalPrice + 5).toFixed(2)} €</td>
             </tr>
         </table>
-        <button onclick="" class="basket-order-button">Bestellen (${(totalPrice + 5).toFixed(2)} €)</button>
+        <button onclick="order()" class="basket-order-button">Bestellen (${(totalPrice + 5).toFixed(2)} €)</button>
     `;
 }

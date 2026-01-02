@@ -28,20 +28,20 @@ function renderBasket() {
 }
 
 function changeBasketDisplay() {
-    let contentRefEmptyBasket = document.getElementById("empty-basket");
-    let contentRefFilledBasket = document.getElementById("filled-basket");
+    const contentRefEmptyBasket = document.getElementById("empty-basket");
+    const contentRefFilledBasket = document.getElementById("filled-basket");
 
     contentRefEmptyBasket.classList.add("d-none");
     contentRefFilledBasket.classList.remove("d-none");
 }
 
 function changeBasketDisplayToEmpty() {
-    if(!BASKET.length) {
-    let contentRefEmptyBasket = document.getElementById("empty-basket");
-    let contentRefFilledBasket = document.getElementById("filled-basket");
+    if (!BASKET.length) {
+        const contentRefEmptyBasket = document.getElementById("empty-basket");
+        const contentRefFilledBasket = document.getElementById("filled-basket");
 
-    contentRefEmptyBasket.classList.remove("d-none");
-    contentRefFilledBasket.classList.add("d-none");
+        contentRefEmptyBasket.classList.remove("d-none");
+        contentRefFilledBasket.classList.add("d-none");
     }
 }
 
@@ -76,4 +76,15 @@ function deleteItem(index) {
     renderBasket();
     changeBasketDisplayToEmpty();
     render();
+}
+
+function order() {
+    const dialogRef = document.getElementById("item-bought-dialog");
+    const contentRefFilledBasket = document.getElementById("filled-basket");
+
+
+    contentRefFilledBasket.classList.add("d-none");
+    dialogRef.showModal();
+
+    // setTimeout(() => {dialogRef.close();}, 5000);
 }

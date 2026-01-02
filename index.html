@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
     <link rel="stylesheet" href="./style/fonts.css">
-    <link rel="stylesheet" href="./style/assets.css">
+    <link rel="stylesheet" href="./style/dialog.css">
     <link rel="stylesheet" href="./style/basket.css">
     <link rel="stylesheet" href="./style/standard.css">
     <link rel="stylesheet" href="./style.css">
@@ -41,18 +41,7 @@
                     <h2>Pizza</h2>
                 </div>
                 <div id="item-container-pizzas">
-                    <!-- <div class="item-container">
-                        <img src="./assets/img/pizza-funghi.jpg" alt="Pizza Funghi" class="item-img">
-                        <div class="item-info">
-                            <span class="item-title">Pizza Funghi</span>
-                            <span>Tomatensoße, Salami, Frische Champignons</span>
-                        </div>
-                        <div class="item-price-info">
-                            <span class="item-price">15,90 €</span>
-                            <div><button class="item-add-button" onclick="addPizzaToBasket()">Hinzufügen</button></div>
-                            <div class="item-added-info2"><button class="item-added-info">Im <span class="added-basket-img"></span></button><button class="item-added-button" onclick="addPizzaToBasket()">+</button></div>
-                        </div>  
-                    </div> -->
+
                 </div>
 
                 <div class="item-group-banner"><img class="banner-icon" src="./assets/icons/salat.png">
@@ -70,6 +59,14 @@
                 </div>
 
             </section>
+            <dialog id="item-bought-dialog">
+                <div class="dialog-section">
+                    <div class="close-btn">X</div>
+                    <img src="./assets/icons/deliverycar.png" class="delivery-img">
+                    <span class="dialog-h2">Bestellung bestätigt!</span><br>
+                    <span class="dialog-text">Deine Bestellung ist auf dem Weg zu dir!</span>
+                </div>
+            </dialog>
             <section class="section-basket">
                 <div id="empty-basket" class="basket">
                     <h2 class="basket-headline">Dein Warenkorb</h2>
@@ -81,12 +78,12 @@
                     <h2 class="basket-headline">Dein Warenkorb</h2>
                     <div id="added-items" class="basket-added-items">
                         <div class="basket-added-item">
-                            <span>1 x Pizza Margherita</span><br>
-                            <div class="basket-desc-qty-price"><span>- 1 +</span><span> 8,50 €</span></div>
+                            <!-- <span>1 x Pizza Margherita</span><br>
+                            <div class="basket-desc-qty-price"><span>- 1 +</span><span> 8,50 €</span></div> -->
                         </div>
                     </div>
                     <div id="id-basket-amount" class="basket-amount">
-                        <table class="basket-amount-table1">
+                        <!-- <table class="basket-amount-table1">
                             <tr>
                                 <td>Zwischensumme:</td>
                                 <td>25,50 €</td>
@@ -102,9 +99,9 @@
                                 <td>27,50 €</td>
                             </tr>
                         </table>
-                        <button class="basket-order-button">Bestellen (27,50 €)</button>
+                        <button class="basket-order-button">Bestellen (27,50 €)</button> -->
                     </div>
-                    
+
                 </div>
             </section>
         </div>
