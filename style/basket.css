@@ -77,8 +77,6 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    /* display: grid;
-    grid-template-columns: 90% 10%; */
 }
 
 .basket-dish {

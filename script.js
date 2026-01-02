@@ -16,6 +16,7 @@ function addItemToBasket(index) {
     }
     calculateTotalPrice();
     renderBasket();
+    render();
 }
 
 function renderBasket() {
@@ -32,6 +33,16 @@ function changeBasketDisplay() {
 
     contentRefEmptyBasket.classList.add("d-none");
     contentRefFilledBasket.classList.remove("d-none");
+}
+
+function changeBasketDisplayToEmpty() {
+    if(!BASKET.length) {
+    let contentRefEmptyBasket = document.getElementById("empty-basket");
+    let contentRefFilledBasket = document.getElementById("filled-basket");
+
+    contentRefEmptyBasket.classList.remove("d-none");
+    contentRefFilledBasket.classList.add("d-none");
+    }
 }
 
 function calculateTotalPrice() {
@@ -63,4 +74,6 @@ function deleteItem(index) {
     BASKET.splice(index, 1);
     calculateTotalPrice();
     renderBasket();
+    changeBasketDisplayToEmpty();
+    render();
 }

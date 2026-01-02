@@ -174,7 +174,7 @@ h2 {
     color: #363534;
 }
 
-.item-buy-button {
+.item-add-button {
     font-weight: 600;
     font-size: 16px;
     color: #363534;
@@ -186,10 +186,60 @@ h2 {
     transition: transform 0.1s ease;
 }
 
-.item-buy-button:hover {
+.item-add-button:hover {
     filter: brightness(1.05);
+    color: #e76c1f;
 }
 
-.item-buy-button:active {
+.item-add-button:active {
+    transform: scale(0.96);
+}
+
+.item-added-info {
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    font-size: 16px;
+    color: #e76c1f;
+    background-color: #fbf8f2;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: default;
+    transition: transform 0.1s ease;
+}
+
+.item-added-info2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.added-basket-img {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #e76c1f;
+    mask-image: url("../assets/icons/basket.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    mask-composite: intersect;
+    padding-left: 6px;
+}
+
+.item-added-button {
+    font-weight: 600;
+    font-size: 16px;
+    color: #e76c1f;
+    background-color: #fbf8f2;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.item-added-button:active {
     transform: scale(0.96);
 }

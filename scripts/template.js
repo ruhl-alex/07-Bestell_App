@@ -17,8 +17,11 @@ function renderCategory(category, containerId) {
 }
 
 function itemTemplate(item) {
+    const checkItem = BASKET.find(itemInBasket => itemInBasket.id === item.id)
+   
+    if(!checkItem) {
     return `
-         <div class="item-container">
+        <div class="item-container">
              <img src="./assets/img/${item.img}" alt="${item.alt}" class="item-img">
              <div class="item-info">
                  <span class="item-title">${item.name}</span>
@@ -26,10 +29,26 @@ function itemTemplate(item) {
              </div>
              <div class="item-price-info">
                  <span class="item-price">${item.price.toFixed(2)} €</span>
-                 <div><button class="item-buy-button" onclick="addItemToBasket(${item.id})">Hinzufügen</button></div>
+                 <div><button class="item-add-button" onclick="addItemToBasket(${item.id})">Hinzufügen</button></div>
              </div>
          </div>
     `;
+    }
+    else {
+        return `
+        <div class="item-container">
+            <img src="./assets/img/${item.img}" alt="${item.alt}" class="item-img">
+             <div class="item-info">
+                 <span class="item-title">${item.name}</span>
+                 <span>${item.ingredients}</span>
+             </div>
+             <div class="item-price-info">
+                 <span class="item-price">${item.price.toFixed(2)} €</span>
+                <div class="item-added-info2"><button class="item-added-info">Im <span class="added-basket-img"></span></button><button class="item-added-button" onclick="addItemToBasket(${item.id})">+</button></div>
+            </div>  
+        </div>
+        `;
+    }
 }
 
 function displayAddedItemsOnBasket(index) {
