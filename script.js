@@ -48,14 +48,18 @@ function calculateTotalPrice() {
 function increaseQty(index) {
     const item = BASKET[index];
     item.qty += 1;
-    // console.log(BASKET);
     calculateTotalPrice();
     renderBasket();
 }
 
 function decreaseQty(index) {
-    
+    const item = BASKET[index];
+    item.qty -= 1;
+    calculateTotalPrice();
+    renderBasket();
+}
 
+function deleteItem(index) {
     BASKET.splice(index, 1);
     calculateTotalPrice();
     renderBasket();
