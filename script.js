@@ -2,7 +2,7 @@ function addItemToBasket(index) {
     changeBasketDisplay();
     const item = ITEMS[index];
     const existingItem = BASKET.find(basketItem => basketItem.id === item.id);
-    
+
     if (existingItem) {
         existingItem.qty += 1;
     }
@@ -43,4 +43,20 @@ function calculateTotalPrice() {
         totalPrice += BASKET[index].price * BASKET[index].qty;
     }
     contentRefTotalPrice.innerHTML += displayTotalPrice(totalPrice);
+}
+
+function increaseQty(index) {
+    const item = BASKET[index];
+    item.qty += 1;
+    // console.log(BASKET);
+    calculateTotalPrice();
+    renderBasket();
+}
+
+function decreaseQty(index) {
+    
+
+    BASKET.splice(index, 1);
+    calculateTotalPrice();
+    renderBasket();
 }

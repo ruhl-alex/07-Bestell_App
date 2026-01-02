@@ -68,7 +68,21 @@
 .basket-desc-qty-price {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 10px 0px 0px;
+}
+
+.basket-upper-area {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    /* display: grid;
+    grid-template-columns: 90% 10%; */
+}
+
+.basket-dish {
+    width: 90%;
 }
 
 .basket-amount {
@@ -131,6 +145,37 @@
     filter: brightness(1.05);
 }
 
-.basket-order-button:active{
+.basket-order-button:active {
     transform: scale(0.96);
+}
+
+.qtyButton {
+    font-size: 22px;
+    background-color: #fdeadc;
+    border: 0;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+
+.set-amount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.qtyButtontrash {
+    height: 15px;
+    object-fit: cover;
+    border: 0px;
+    cursor: pointer;
+    padding: 0px 5px;
+}
+
+.qtyButtontrashUpRight {
+    height: 15px;
+    object-fit: cover;
+    border: 0px;
+    cursor: pointer;
+    padding: 0px 5px;
+    left: 0;
 }

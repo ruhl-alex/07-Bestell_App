@@ -1,6 +1,6 @@
 function render() {
     renderCategory("pizzas", "item-container-pizzas");
-    renderCategory("salads", "item-container-salads");      
+    renderCategory("salads", "item-container-salads");
     renderCategory("drinks", "item-container-drinks");
 }
 
@@ -35,8 +35,18 @@ function itemTemplate(item) {
 function displayAddedItemsOnBasket(index) {
     return `
             <div class="basket-added-item">
-            <span>${BASKET[index].qty} x ${BASKET[index].name}</span><br>
-            <div class="basket-desc-qty-price"><span>- 1 +</span><span> ${(BASKET[index].price * BASKET[index].qty).toFixed(2)} €</span></div>
+            <div class="basket-upper-area">
+            <span class="basket-dish">${BASKET[index].qty} x ${BASKET[index].name}</span>
+            <img src="./assets/icons/trash.png" id="button-decrease1" onclick="decreaseQty(${index})" class="qtyButtontrashUpRight"><br>
+            </div>
+            <div class="basket-desc-qty-price">
+            <div class="set-amount">
+                <img src="./assets/icons/trash.png" id="button-decrease1" onclick="decreaseQty(${index})" class="qtyButtontrash">
+                <button id="button-decrease2" onclick="decreaseQty(${index})" class="qtyButton d-none">-</button>
+                    1
+                <button id="button-increase" onclick="increaseQty(${index})" class="qtyButton">+</button>
+            </div>
+            <span> ${(BASKET[index].price * BASKET[index].qty).toFixed(2)} €</span></div>
             </div>
     `;
 }
