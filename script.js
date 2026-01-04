@@ -16,6 +16,7 @@ function addItemToBasket(index) {
     }
     calculateTotalPrice();
     renderBasket();
+    saveBasketToLocalStorage();
     render();
 }
 
@@ -60,6 +61,7 @@ function increaseQty(index) {
     const item = BASKET[index];
     item.qty += 1;
     calculateTotalPrice();
+    saveBasketToLocalStorage();
     renderBasket();
 }
 
@@ -67,6 +69,7 @@ function decreaseQty(index) {
     const item = BASKET[index];
     item.qty -= 1;
     calculateTotalPrice();
+    saveBasketToLocalStorage();
     renderBasket();
 }
 
@@ -75,6 +78,7 @@ function deleteItem(index) {
     calculateTotalPrice();
     renderBasket();
     changeBasketDisplayToEmpty();
+    saveBasketToLocalStorage();
     render();
 }
 
@@ -83,6 +87,7 @@ function order() {
     const contentRefFilledBasket = document.getElementById("filled-basket");
 
     BASKET = [];
+    saveBasketToLocalStorage();
     render();
     contentRefFilledBasket.classList.add("d-none");
     dialogRef.showModal();

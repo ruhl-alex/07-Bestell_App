@@ -1,4 +1,5 @@
 function render() {
+    getBasketFromLocalStorage();
     renderCategory("pizzas", "item-container-pizzas");
     renderCategory("salads", "item-container-salads");
     renderCategory("drinks", "item-container-drinks");
