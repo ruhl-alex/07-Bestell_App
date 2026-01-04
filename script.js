@@ -26,6 +26,8 @@ function renderBasket() {
     for (let index = 0; index < BASKET.length; index++) {
         contentRefBasket.innerHTML += displayAddedItemsOnBasket(index);
     }
+    changeBasketDisplay();
+    calculateTotalPrice();
 }
 
 function changeBasketDisplay() {

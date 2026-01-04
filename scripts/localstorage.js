@@ -10,3 +10,11 @@ function getBasketFromLocalStorage() {
     }
     return;
 }
+
+function checkLocalStorage () {
+    getBasketFromLocalStorage();
+    if (BASKET.length > 0) {
+        renderBasket();
+    }
+    return;
+}
