@@ -20,6 +20,7 @@ function addItemToBasket(index) {
     render();
 }
 
+
 function renderBasket() {
     let contentRefBasket = document.getElementById("added-items");
     contentRefBasket.innerHTML = "";
@@ -28,6 +29,8 @@ function renderBasket() {
     }
     changeBasketDisplay();
     calculateTotalPrice();
+    basketCounter();
+    checkIfMobile();
 }
 
 function changeBasketDisplay() {
@@ -91,13 +94,53 @@ function order() {
     BASKET = [];
     saveBasketToLocalStorage();
     render();
+    renderBasket();
     contentRefFilledBasket.classList.add("d-none");
     dialogRef.showModal();
-    setTimeout(() => {dialogRef.close();}, 3000);
+    setTimeout(() => { dialogRef.close(); }, 3000);
 }
 
 function closeDialog() {
     const dialogRef = document.getElementById("item-bought-dialog");
 
     dialogRef.close();
+}
+
+function basketCounter() {
+    const basketCounter = document.getElementById("basket-amount-counter");
+    const basketImg = document.getElementById("basekt-img1");
+
+    basketAmount = BASKET.length;
+    basketCounter.innerHTML = basketAmount;
+    if (BASKET.length === 0) {
+        basketCounter.classList.add("d-none");
+        basketImg.src = "./assets/icons/basket_white.png";
+    }
+    if (BASKET.length > 0) {
+        basketCounter.classList.remove("d-none");
+        basketImg.src = "./assets/icons/basket_orange.png";
+    }
+}
+
+function checkIfMobile() {
+    const emptyBasekt = document.getElementById('empty-basket');
+    const filledBasekt = document.getElementById('filled-basket');
+
+    if (window.innerWidth < 760) {
+        emptyBasekt.classList.add("d-none");
+        filledBasekt.classList.add("d-none");
+    }
+}
+
+function mobileBasketToggle() {
+    let emptyBasket = document.getElementById('empty-basket');
+    let filledBasket = document.getElementById('filled-basket');
+
+    if (basketAmount === 0) {
+        emptyBasket.classList.toggle('d-none');
+    }
+    else {
+        filledBasket.classList.toggle('d-none');
+
+    }
 }

@@ -1,5 +1,5 @@
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .section-main-content {
@@ -349,6 +349,8 @@ h2 {
         height: 100%;
         color: #fdeadc;
         text-decoration: none;
+        background-color: #363534;
+        border: 0;
     }
 
     .mobile-nav-icon {
@@ -362,7 +364,7 @@ h2 {
     }
 
     .basket {
-        display: none;
+        /* display: none; */
         position: fixed;
         bottom: 0;
         left: 0;
@@ -371,7 +373,11 @@ h2 {
         border-bottom-left-radius: 0px;
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
+    }
+
+    .basket.is-open {
+        display: flex;
     }
 
     .basket-added-items {
