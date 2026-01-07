@@ -14,7 +14,7 @@ function addItemToBasket(index) {
             qty: 1
         });
     }
-    calculateTotalPrice();
+    // calculateTotalPrice();
     renderBasket();
     saveBasketToLocalStorage();
     render();
@@ -36,8 +36,10 @@ function changeBasketDisplay() {
     const contentRefEmptyBasket = document.getElementById("empty-basket");
     const contentRefFilledBasket = document.getElementById("filled-basket");
 
+    if(window.innerWidth > 760) {
     contentRefEmptyBasket.classList.add("d-none");
     contentRefFilledBasket.classList.remove("d-none");
+    }
 }
 
 function changeBasketDisplayToEmpty() {
@@ -139,11 +141,11 @@ function mobileBasketToggle() {
     let emptyBasket = document.getElementById('empty-basket');
     let filledBasket = document.getElementById('filled-basket');
 
-    if (basketAmount === 0) {
-        emptyBasket.classList.toggle('d-none');
+    if (basketAmount > 0) {
+        filledBasket.classList.toggle('d-none');
     }
     else {
-        filledBasket.classList.toggle('d-none');
+        emptyBasket.classList.toggle('d-none');
     }
 }
 

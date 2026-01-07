@@ -144,4 +144,4 @@ let BASKET = [
 
 ]
 
-let basketAmount = 0;
+let basketAmount = "0";
