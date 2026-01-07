@@ -1,5 +1,5 @@
 function render() {
-    checkIfMobile();
+    // checkIfMobile();
     getBasketFromLocalStorage();
     checkLocalStorage();
     renderCategory("pizzas", "item-container-pizzas");

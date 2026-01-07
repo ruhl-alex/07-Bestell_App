@@ -30,7 +30,6 @@ function renderBasket() {
     changeBasketDisplay();
     calculateTotalPrice();
     basketCounter();
-    checkIfMobile();
 }
 
 function changeBasketDisplay() {
@@ -123,14 +122,18 @@ function basketCounter() {
 }
 
 function checkIfMobile() {
-    const emptyBasekt = document.getElementById('empty-basket');
-    const filledBasekt = document.getElementById('filled-basket');
+    const emptyBasket = document.getElementById('empty-basket');
+    const filledBasket = document.getElementById('filled-basket');
 
     if (window.innerWidth < 760) {
-        emptyBasekt.classList.add("d-none");
-        filledBasekt.classList.add("d-none");
+        emptyBasket.classList.add("d-none");
+        filledBasket.classList.add("d-none");
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    checkIfMobile();
+});
 
 function mobileBasketToggle() {
     let emptyBasket = document.getElementById('empty-basket');
@@ -141,6 +144,6 @@ function mobileBasketToggle() {
     }
     else {
         filledBasket.classList.toggle('d-none');
-
     }
 }
+

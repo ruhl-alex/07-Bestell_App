@@ -347,10 +347,10 @@ h2 {
         align-items: center;
         width: 50%;
         height: 100%;
-        color: #fdeadc;
+        /* color: #fdeadc;
         text-decoration: none;
         background-color: #363534;
-        border: 0;
+        border: 0; */
     }
 
     .mobile-nav-icon {
