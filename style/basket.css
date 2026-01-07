@@ -12,21 +12,18 @@
     padding: 20px;
     margin-top: 40px;
 }
-
 .basket-headline {
     font-family: "Rubik_bold";
     font-size: 24px;
     color: #fdeadc;
     margin-bottom: 15px;
 }
-
 .basket-desc {
     font-size: 16px;
     color: #fdeadc;
     text-align: center;
     margin-bottom: 20px;
 }
-
 .empty-basket-img {
     display: block;
     width: 120px;
@@ -39,7 +36,6 @@
     mask-size: contain;
     mask-composite: intersect;
 }
-
 .basket-added-items {
     overflow-y: auto;
     width: 100%;
@@ -47,16 +43,13 @@
     margin-bottom: 10px;
     padding-right: 5px;
 }
-
 .basket-added-items::-webkit-scrollbar {
     width: 10px;
 }
-
 .basket-added-items::-webkit-scrollbar-thumb {
     background: #fdeadc;
     border-radius: 6px;
 }
-
 .basket-added-item {
     font-weight: 800;
     background-color: #fdeadc;
@@ -64,25 +57,21 @@
     border-radius: 10px;
     margin-bottom: 10px;
 }
-
 .basket-desc-qty-price {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px 0px 0px;
 }
-
 .basket-upper-area {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
 }
-
 .basket-dish {
     width: 90%;
 }
-
 .basket-amount {
     display: flex;
     flex-direction: column;
@@ -92,39 +81,32 @@
     font-weight: 800;
     font-size: 16px;
 }
-
 .basket-amount-table1 {
     width: 95%;
     border-collapse: collapse;
     margin-top: 10px;
 }
-
 .basket-amount-table1 td:first-child {
     text-align: left;
 }
-
 .basket-amount-table1 td:last-child {
     text-align: right;
 }
-
 .basket-amount-table2 {
     width: 95%;
     border-collapse: collapse;
     margin-top: 10px;
 }
-
 .basket-amount-table2 td:first-child {
     text-align: left;
     padding-top: 5px;
     border-top: solid 2px #fdeadc;
 }
-
 .basket-amount-table2 td:last-child {
     text-align: right;
     padding-top: 5px;
     border-top: solid 2px #fdeadc;
 }
-
 .basket-order-button {
     width: 85%;
     padding: 12px;
@@ -138,15 +120,12 @@
     cursor: pointer;
     transition: transform 0.1s ease;
 }
-
 .basket-order-button:hover {
     filter: brightness(1.05);
 }
-
 .basket-order-button:active {
     transform: scale(0.96);
 }
-
 .qtyButton {
     font-size: 22px;
     background-color: #fdeadc;
@@ -154,13 +133,11 @@
     padding: 0px 5px;
     cursor: pointer;
 }
-
 .set-amount {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
 .qtyButtontrash {
     height: 15px;
     object-fit: cover;
@@ -168,7 +145,6 @@
     cursor: pointer;
     padding: 0px 5px;
 }
-
 .qtyButtontrashUpRight {
     height: 15px;
     object-fit: cover;
@@ -177,13 +153,11 @@
     padding: 0px 5px;
     left: 0;
 }
-
 .close-button-area {
     display: flex;
     justify-content: flex-end;
     width: 100%;
 }
-
 .close-button {
     width: 50px;
     height: 50px;
