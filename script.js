@@ -36,9 +36,9 @@ function changeBasketDisplay() {
     const contentRefEmptyBasket = document.getElementById("empty-basket");
     const contentRefFilledBasket = document.getElementById("filled-basket");
 
-    if(window.innerWidth > 760) {
-    contentRefEmptyBasket.classList.add("d-none");
-    contentRefFilledBasket.classList.remove("d-none");
+    if (window.innerWidth > 760) {
+        contentRefEmptyBasket.classList.add("d-none");
+        contentRefFilledBasket.classList.remove("d-none");
     }
 }
 
@@ -126,16 +126,20 @@ function basketCounter() {
 function checkIfMobile() {
     const emptyBasket = document.getElementById('empty-basket');
     const filledBasket = document.getElementById('filled-basket');
+    const emptyBasketButton = document.getElementById('close-empty-basket');
+    const filledBasketButton = document.getElementById('close-filled-basket');
 
     if (window.innerWidth < 760) {
         emptyBasket.classList.add("d-none");
         filledBasket.classList.add("d-none");
+        
+    }
+
+    if (window.innerWidth > 760) {
+        emptyBasketButton.classList.add("d-none");
+        filledBasketButton.classList.add("d-none");
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    checkIfMobile();
-});
 
 function mobileBasketToggle() {
     let emptyBasket = document.getElementById('empty-basket');
@@ -149,3 +153,10 @@ function mobileBasketToggle() {
     }
 }
 
+function closeBasket() {
+    const contentRefEmptyBasket = document.getElementById("empty-basket");
+    const contentRefFilledBasket = document.getElementById("filled-basket");
+
+    contentRefEmptyBasket.classList.add("d-none");
+    contentRefFilledBasket.classList.add("d-none");
+}

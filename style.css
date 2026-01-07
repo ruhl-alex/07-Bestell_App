@@ -363,6 +363,7 @@ h2 {
     .basket {
         /* display: none; */
         position: fixed;
+        height: 525px;
         bottom: 0;
         left: 0;
         top: auto;

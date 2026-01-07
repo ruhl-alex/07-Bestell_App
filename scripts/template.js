@@ -1,4 +1,5 @@
 function render() {
+    checkIfMobile();
     basketCounter();
     getBasketFromLocalStorage();
     checkLocalStorage();
