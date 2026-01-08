@@ -73,7 +73,6 @@
     font-size: 20px;
     font-weight: 800;
     color: #666666;
-    /* margin: 12px 0px 20px 0px; */
 }
 
 .logo-top {
@@ -362,7 +361,6 @@ h2 {
     }
 
     .basket {
-        /* display: none; */
         position: fixed;
         height: 525px;
         bottom: 0;
