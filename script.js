@@ -3,9 +3,7 @@ function addItemToBasket(index) {
     const item = ITEMS[index];
     const existingItem = BASKET.find(basketItem => basketItem.id === item.id);
 
-    if (existingItem) {
-        existingItem.qty += 1;
-    }
+    if (existingItem) {existingItem.qty += 1;}
     else {
         BASKET.push({
             id: item.id,
@@ -14,7 +12,6 @@ function addItemToBasket(index) {
             qty: 1
         });
     }
-    // calculateTotalPrice();
     renderBasket();
     saveBasketToLocalStorage();
     render();
@@ -63,24 +60,15 @@ function calculateTotalPrice() {
     contentRefTotalPrice.innerHTML += displayTotalPrice(totalPrice);
 }
 
-function increaseQty(index) {
+function changeBasketAmount(index, art) {
     const item = BASKET[index];
-    item.qty += 1;
-    calculateTotalPrice();
-    saveBasketToLocalStorage();
-    renderBasket();
-}
 
-function decreaseQty(index) {
-    const item = BASKET[index];
-    item.qty -= 1;
-    calculateTotalPrice();
-    saveBasketToLocalStorage();
-    renderBasket();
-}
-
-function deleteItem(index) {
-    BASKET.splice(index, 1);
+    if (art === 1) {item.qty += 1;}
+    else if (art === 2) {item.qty -= 1;
+        if (item.qty <= 0) {
+            BASKET.splice(index, 1);
+        }}
+    else if (art === 3) {BASKET.splice(index, 1);}
     calculateTotalPrice();
     renderBasket();
     changeBasketDisplayToEmpty();
@@ -103,7 +91,6 @@ function order() {
 
 function closeDialog() {
     const dialogRef = document.getElementById("item-bought-dialog");
-
     dialogRef.close();
 }
 
@@ -123,6 +110,15 @@ function basketCounter() {
     }
 }
 
+function basketCounter() {
+    const basketCounter = document.getElementById("basket-amount-counter");
+    const basketImg = document.getElementById("basekt-img1");
+
+    for (let index = 0; index < BASKET.length; index++) {
+        
+    }
+}
+
 function checkIfMobile() {
     const emptyBasket = document.getElementById('empty-basket');
     const filledBasket = document.getElementById('filled-basket');
@@ -132,9 +128,7 @@ function checkIfMobile() {
     if (window.innerWidth < 760) {
         emptyBasket.classList.add("d-none");
         filledBasket.classList.add("d-none");
-        
     }
-
     if (window.innerWidth > 760) {
         emptyBasketButton.classList.add("d-none");
         filledBasketButton.classList.add("d-none");
