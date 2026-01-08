@@ -3,7 +3,7 @@ function addItemToBasket(index) {
     const item = ITEMS[index];
     const existingItem = BASKET.find(basketItem => basketItem.id === item.id);
 
-    if (existingItem) {existingItem.qty += 1;}
+    if (existingItem) { existingItem.qty += 1; }
     else {
         BASKET.push({
             id: item.id,
@@ -60,21 +60,48 @@ function calculateTotalPrice() {
     contentRefTotalPrice.innerHTML += displayTotalPrice(totalPrice);
 }
 
-function changeBasketAmount(index, art) {
-    const item = BASKET[index];
+// function changeBasketAmount(itemId, art) {
+//     const item = BASKET[itemId];
 
-    if (art === 1) {item.qty += 1;}
-    else if (art === 2) {item.qty -= 1;
+//     if (art === 1) { item.qty += 1; }
+//     else if (art === 2) {
+//         item.qty -= 1;
+//         if (item.qty <= 0) {
+//             BASKET.splice(itemId, 1);
+//         }
+//     }
+//     else if (art === 3) { BASKET.splice(itemId, 1); }
+//     calculateTotalPrice();
+//     renderBasket();
+//     changeBasketDisplayToEmpty();
+//     saveBasketToLocalStorage();
+//     render();
+// }
+
+function changeBasketAmount(index, art) {
+    const itemIndex = BASKET.findIndex(e => e.id === index);
+    const item = BASKET[itemIndex];
+    if (art === 1) { 
+        item.qty += 1; 
+    } 
+    else if (art === 2) {
+        item.qty -= 1;
         if (item.qty <= 0) {
-            BASKET.splice(index, 1);
-        }}
-    else if (art === 3) {BASKET.splice(index, 1);}
+            BASKET.splice(itemIndex, 1);
+        }
+    } 
+    else if (art === 3) { 
+        BASKET.splice(itemIndex, 1); 
+    }
+
     calculateTotalPrice();
     renderBasket();
     changeBasketDisplayToEmpty();
     saveBasketToLocalStorage();
     render();
 }
+
+
 
 function order() {
     const dialogRef = document.getElementById("item-bought-dialog");
@@ -96,9 +123,12 @@ function closeDialog() {
 
 function basketCounter() {
     const basketCounter = document.getElementById("basket-amount-counter");
-    const basketImg = document.getElementById("basekt-img1");
+    const basketImg = document.getElementById("basket-img1");
+    let basketAmount = 0;
 
-    basketAmount = BASKET.length;
+    for (let index = 0; index < BASKET.length; index++) {
+        basketAmount = basketAmount + BASKET[index].qty
+    }
     basketCounter.innerHTML = basketAmount;
     if (BASKET.length === 0) {
         basketCounter.classList.add("d-none");
@@ -107,15 +137,6 @@ function basketCounter() {
     if (BASKET.length > 0) {
         basketCounter.classList.remove("d-none");
         basketImg.src = "./assets/icons/basket_orange.png";
-    }
-}
-
-function basketCounter() {
-    const basketCounter = document.getElementById("basket-amount-counter");
-    const basketImg = document.getElementById("basekt-img1");
-
-    for (let index = 0; index < BASKET.length; index++) {
-        
     }
 }
 
@@ -139,7 +160,7 @@ function mobileBasketToggle() {
     let emptyBasket = document.getElementById('empty-basket');
     let filledBasket = document.getElementById('filled-basket');
 
-    if (basketAmount > 0) {
+    if (BASKET.length > 0) {
         filledBasket.classList.toggle('d-none');
     }
     else {

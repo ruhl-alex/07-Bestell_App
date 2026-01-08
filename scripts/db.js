@@ -143,5 +143,3 @@ const ITEMS = [
 let BASKET = [
 
 ]
-
-let basketAmount = "0";
