@@ -48,7 +48,7 @@ function itemTemplate(item) {
              </div>
              <div class="item-price-info">
                 <span class="item-price">${item.price.toFixed(2)} €</span>
-                <div class="item-added-info2"></button><button class="item-added-button" onclick="changeBasketAmount(${item.id}, 2)">-</button></button><button class="item-added-button" onclick="changeBasketAmount(${item.id}, 1)">+</button></div>
+                <div class="item-added-info2"></button><button class="item-added-button" onclick="changeBasketAmountInTemplate(${item.id}, 2)">-</button></button><button class="item-added-button" onclick="changeBasketAmountInTemplate(${item.id}, 1)">+</button></div>
             </div>  
         </div>
         `;

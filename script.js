@@ -60,7 +60,7 @@ function calculateTotalPrice() {
     contentRefTotalPrice.innerHTML += displayTotalPrice(totalPrice);
 }
 
-function changeBasketAmount(ITEMIndex, art) {
+function changeBasketAmountInTemplate(ITEMIndex, art) {
     const itemIndexOfBasket = BASKET.findIndex(e => e.id === ITEMIndex);
     const item = BASKET[itemIndexOfBasket];
     if (art === 1) { item.qty += 1; } 
@@ -94,6 +94,23 @@ function order() {
 function closeDialog() {
     const dialogRef = document.getElementById("item-bought-dialog");
     dialogRef.close();
+}
+
+function changeBasketAmount(index, art) {
+    const item = BASKET[index];
+    if (art === 1) { item.qty += 1; } 
+    else if (art === 2) {
+        item.qty -= 1;
+        if (item.qty <= 0) {
+            BASKET.splice(index, 1);
+        }
+    } 
+    else if (art === 3) { BASKET.splice(index, 1); }
+    calculateTotalPrice();
+    renderBasket();
+    changeBasketDisplayToEmpty();
+    saveBasketToLocalStorage();
+    render();
 }
 
 function basketCounter() {
