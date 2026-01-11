@@ -116,7 +116,7 @@ function displayAddedItemsOnBasket(index) {
     }
 }
 
-function displayTotalPrice(totalPrice) {
+function displayTotalPrice(totalPrice, shippingFee) {
     return `
         <table class="basket-amount-table1">
             <tr>
@@ -125,7 +125,7 @@ function displayTotalPrice(totalPrice) {
             </tr>
             <tr>
                 <td>Lieferkosten:</td>
-                <td>5,00 €</td>
+                <td>${shippingFee.toFixed(2)} €</td>
             </tr>
         </table>
         <table class="basket-amount-table2">

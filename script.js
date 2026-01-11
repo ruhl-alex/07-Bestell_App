@@ -44,12 +44,19 @@ function renderBasket() {
 function calculateTotalPrice() {
     const contentRefTotalPrice = document.getElementById("id-basket-amount");
     let totalPrice = 0;
+    let shippingFee = 0;
 
     contentRefTotalPrice.innerHTML = "";
     for (let index = 0; index < BASKET.length; index++) {
         totalPrice += BASKET[index].price * BASKET[index].qty;
     }
-    contentRefTotalPrice.innerHTML += displayTotalPrice(totalPrice);
+    if (totalPrice < 45) {
+        shippingFee = 5;
+    }
+    else {
+        shippingFee = 0;
+    }
+    contentRefTotalPrice.innerHTML += displayTotalPrice(totalPrice, shippingFee);
 }
 
 function changeBasketAmountInTemplate(ITEMIndex, art) {
