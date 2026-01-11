@@ -69,15 +69,8 @@
                 </div>
             </dialog>
             <section class="section-basket">
-                <div id="empty-basket" class="basket">
-                    <div id="close-empty-basket" class="close-button-area"><button onclick="closeBasket()" class="close-button">X</button></div>
-                    <h2 class="basket-headline">Dein Warenkorb</h2>
-                    <span class="basket-desc">Dein Warenkorb ist aktuell leer.<br><br>Wähle jetzt ein leckeres Gericht
-                        aus unserem Menü aus!</span>
-                    <div class="empty-basket-img" aria-label="Empty Basket"></div>
-                </div>
-                <div id="filled-basket" class="basket d-none">
-                    <div id="close-filled-basket" class="close-button-area"><button onclick="closeBasket()" class="close-button">X</button></div>
+                <div id="basket" class="basket">
+                    <div id="close-filled-basket" class="close-button-area d-none"><button onclick="closeBasket()" class="close-button">X</button></div>
                     <h2 class="basket-headline">Dein Warenkorb</h2>
                     <div id="added-items" class="basket-added-items">
                         <div class="basket-added-item">

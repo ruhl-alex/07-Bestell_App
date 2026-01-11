@@ -1,5 +1,6 @@
 function render() {
-    checkIfMobile();
+    displayBasket();
+    // checkIfMobile();
     basketCounter();
     getBasketFromLocalStorage();
     checkLocalStorage();
@@ -55,18 +56,43 @@ function itemTemplate(item) {
     }
 }
 
+function displayEmptyBasket() {
+    return `
+            <div id="close-empty-basket" class="close-button-area"><button onclick="closeBasket()" class="close-button">X</button></div>
+            <h2 class="basket-headline">Dein Warenkorb</h2>
+            <span class="basket-desc">Dein Warenkorb ist aktuell leer.<br><br>Wähle jetzt ein leckeres Gericht
+                aus unserem Menü aus!</span>
+            <div class="empty-basket-img" aria-label="Empty Basket"></div>
+    `;
+}
+
+function displayFilledBasket() {
+    return `
+            <div id="close-filled-basket" class="close-button-area"><button onclick="closeBasket()" class="close-button">X</button></div>
+            <h2 class="basket-headline">Dein Warenkorb</h2>
+            <div id="added-items" class="basket-added-items">
+                <div class="basket-added-item">
+
+                </div>
+            </div>
+            <div id="id-basket-amount" class="basket-amount">
+
+            </div>
+    `;
+}
+
 function displayAddedItemsOnBasket(index) {
     if (BASKET[index].qty > 1) {
         return `
             <div class="basket-added-item">
             <div class="basket-upper-area">
-            <span class="basket-dish">${BASKET[index].qty} x ${BASKET[index].name}</span>
+            <span class="basket-dish">1 x ${BASKET[index].name}</span>
             <img src="./assets/icons/trash.png" id="button-decrease1" onclick="changeBasketAmount(${index}, 3)" class="qtyButtontrashUpRight"><br>
             </div>
             <div class="basket-desc-qty-price">
             <div id="basket-amount-container" class="set-amount">
                 <button id="button-decrease2" onclick="changeBasketAmount(${index}, 2)" class="qtyButton">-</button>
-                    1
+                    ${BASKET[index].qty}
                 <button id="button-increase" onclick="changeBasketAmount(${index}, 1)" class="qtyButton">+</button>
             </div>
             <span> ${(BASKET[index].price * BASKET[index].qty).toFixed(2)} €</span></div>
@@ -77,12 +103,12 @@ function displayAddedItemsOnBasket(index) {
         return `
             <div class="basket-added-item">
             <div class="basket-upper-area">
-            <span class="basket-dish">${BASKET[index].qty} x ${BASKET[index].name}</span>
+            <span class="basket-dish">1 x ${BASKET[index].name}</span>
             </div>
             <div class="basket-desc-qty-price">
             <div id="basket-amount-container" class="set-amount">
                 <img src="./assets/icons/trash.png" id="button-decrease1" onclick="changeBasketAmount(${index}, 3)" class="qtyButtontrash">
-                    1
+                    ${BASKET[index].qty}
                 <button id="button-increase" onclick="changeBasketAmount(${index}, 1)" class="qtyButton">+</button>
             </div>
             <span> ${(BASKET[index].price * BASKET[index].qty).toFixed(2)} €</span></div>
