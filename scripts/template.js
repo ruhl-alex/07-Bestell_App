@@ -131,9 +131,9 @@ function displayTotalPrice(totalPrice, shippingFee) {
         <table class="basket-amount-table2">
             <tr>
                 <td>Gesamt:</td>
-                <td>${(totalPrice + 5).toFixed(2)} €</td>
+                <td>${(totalPrice + shippingFee).toFixed(2)} €</td>
             </tr>
         </table>
-        <button onclick="order()" class="basket-order-button">Bestellen (${(totalPrice + 5).toFixed(2)} €)</button>
+        <button onclick="order()" class="basket-order-button">Bestellen (${(totalPrice + shippingFee).toFixed(2)} €)</button>
     `;
 }
