@@ -10,7 +10,9 @@ function displayBasket() {
 function addItemToBasket(index) {
     const item = ITEMS[index];
     const existingItem = BASKET.find(basketItem => basketItem.id === item.id);
+    let contentRefBasket = document.getElementById("basket");
 
+    contentRefBasket.classList.remove("d-none");
     if (existingItem) { existingItem.qty += 1; }
     else {
         BASKET.push({
