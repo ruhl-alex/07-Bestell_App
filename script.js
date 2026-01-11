@@ -8,7 +8,6 @@ function displayBasket() {
 }
 
 function addItemToBasket(index) {
-    // changeBasketDisplay();
     const item = ITEMS[index];
     const existingItem = BASKET.find(basketItem => basketItem.id === item.id);
 
@@ -36,30 +35,9 @@ function renderBasket() {
     for (let index = 0; index < BASKET.length; index++) {
         contentRefItems.innerHTML += displayAddedItemsOnBasket(index);
     }
-    // changeBasketDisplay();
     calculateTotalPrice();
     basketCounter();
 }
-
-// function changeBasketDisplay() {
-//     const contentRefEmptyBasket = document.getElementById("empty-basket");
-//     const contentRefFilledBasket = document.getElementById("filled-basket");
-
-//     if (window.innerWidth > 760) {
-//         contentRefEmptyBasket.classList.add("d-none");
-//         contentRefFilledBasket.classList.remove("d-none");
-//     }
-// }
-
-// function changeBasketDisplayToEmpty() {
-//     if (!BASKET.length) {
-//         const contentRefEmptyBasket = document.getElementById("empty-basket");
-//         const contentRefFilledBasket = document.getElementById("filled-basket");
-
-//         contentRefEmptyBasket.classList.remove("d-none");
-//         contentRefFilledBasket.classList.add("d-none");
-//     }
-// }
 
 function calculateTotalPrice() {
     const contentRefTotalPrice = document.getElementById("id-basket-amount");
@@ -78,7 +56,7 @@ function changeBasketAmountInTemplate(ITEMIndex, art) {
     if (art === 1) { item.qty += 1; }
     else if (art === 2) {
         item.qty -= 1;
-        if (item.qty <= 0) {BASKET.splice(itemIndexOfBasket, 1);}
+        if (item.qty <= 0) { BASKET.splice(itemIndexOfBasket, 1); }
     }
     else if (art === 3) {
         BASKET.splice(itemIndexOfBasket, 1);
@@ -93,15 +71,17 @@ function changeBasketAmountInTemplate(ITEMIndex, art) {
 function order() {
     const dialogRef = document.getElementById("item-bought-dialog");
     const contentRefBasket = document.getElementById("basket");
-
     BASKET = [];
     saveBasketToLocalStorage();
     render();
     renderBasket();
     contentRefBasket.innerHTML = displayEmptyBasket();
-    if (window.innerWidth > 760) {contentRefBasket.classList.add('d-none');}
-    if (window.innerWidth <= 760) {contentRefBasket.classList.toggle('active');}
+    contentRefBasket.classList.add('d-none');
     dialogRef.showModal();
+    if (window.innerWidth <= 760) {
+        contentRefBasket.classList.remove('d-none');
+        contentRefBasket.classList.toggle('active');
+    }
     setTimeout(() => { dialogRef.close(); }, 3000);
 }
 
@@ -146,27 +126,6 @@ function basketCounter() {
         basketImg.src = "./assets/icons/basket_orange.png";
     }
 }
-
-// function checkIfMobile() {
-//     const Basket = document.getElementById('basket');
-//     const filledBasketButton = document.getElementById('close-filled-basket');
-//     const emptyBasketButton = document.getElementById('close-empty-basket');
-
-
-//     if (window.innerWidth < 760 && BASKET.length === 0) {
-//         emptyBasketButton.classList.remove("d-none");
-//         Basket.classList.add("d-none");
-//     }
-//     if (window.innerWidth < 760 && BASKET.length >= 1) {
-//         filledBasketButton.classList.remove("d-none");
-//         Basket.classList.add("d-none");
-//     }
-//     if (window.innerWidth > 760 && BASKET.length >= 1) {
-//         filledBasketButton.classList.add("d-none");
-//         Basket.classList.remove ("d-none");
-//     }
-
-// }
 
 function mobileBasketToggle() {
     let Basket = document.getElementById('basket');
